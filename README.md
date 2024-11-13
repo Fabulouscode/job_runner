@@ -24,3 +24,20 @@ This project implements a background job dispatching system in Laravel using the
 
 ```bash
 composer install
+
+## Usage
+
+This application includes a route to initiate a background job for processing user data. You can use this route to test background job execution.
+
+### Initiate Background Job
+
+To start a background job for processing user data, visit the `/test-job` endpoint.
+
+Example route definition:
+
+```php
+Route::get('/test-job', function () {
+    runBackgroundJob(\App\Jobs\ProcessUserData::class, 'handle', [1]);
+
+    return 'Background job has been initiated';
+});

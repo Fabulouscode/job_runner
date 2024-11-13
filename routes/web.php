@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test-job', function () {
-    runBackgroundJob(\App\Jobs\ProcessUserData::class, 'handle', [2]);
+    runBackgroundJob(\App\Jobs\ProcessUserData::class, 'handle', [1]);
 
     return 'Background job has been initiated';
 });
