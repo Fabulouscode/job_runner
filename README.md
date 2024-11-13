@@ -22,7 +22,6 @@ This project implements a background job dispatching system in Laravel using the
 
 2. **Install Dependencies**
 
-``bash
 composer install
 
 QUEUE_CONNECTION=database
@@ -39,7 +38,7 @@ To start a background job for processing user data, visit the `/test-job` endpoi
 
 Example route definition:
 
-``php
+```php
 Route::get('/test-job', function () {
     runBackgroundJob(\App\Jobs\ProcessUserData::class, 'handle', [1]);
 
