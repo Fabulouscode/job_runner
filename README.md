@@ -24,4 +24,3 @@ This project implements a background job dispatching system in Laravel using the
 
 ```bash
 composer install
-
